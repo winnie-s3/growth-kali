@@ -24,8 +24,8 @@ const testimonials = [
   },
 ];
 
-const TestCardCarousel = () => (
-  <Marquee play={true} gradient={true} gradientColor="#111822" gradientWidth={400} direction="left" speed={70} loop={0} >
+const TestCardCarousel = ({direction}) => (
+  <Marquee play={true} gradient={true} gradientColor="#111822" gradientWidth={150} direction={direction} speed={70} loop={0} >
     {testimonials.map((testimonial, index) => (
       <TestCard key={index} {...testimonial} />
     ))}

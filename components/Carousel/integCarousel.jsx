@@ -30,19 +30,12 @@ const images = [
   },
 ];
 
-const IntegCarousel = () => (
-    <div className="w-5/12 grid grid-cols-2 gap-10 mt-32 items-center justify-center">
-      <Marquee className="h-[400px]" play={true} gradient={true} gradientColor="#111822" gradientWidth={100} direction="up" speed={100} loop={0} style={{ width: "600px" }}>
+const IntegCarousel = ({direct}) => (
+      <Marquee className="h-[300px]" play={true} gradient={true} gradientColor="#111822" gradientWidth={100} direction={direct} speed={30} loop={0} style={{ width: "600px" }}>
         {images.map((image, index) => (
           <IntegCard key={index} {...image} />
         ))}
       </Marquee>
-      <Marquee className="h-[400px]" play={true} gradient={true} gradientColor="#111822" gradientWidth={100} direction="down" speed={100} loop={0} style={{ width: "600px" }}>
-        {images.map((image, index) => (
-          <IntegCard key={index} {...image} />
-        ))}
-      </Marquee>
-    </div>
 );
 
 export default IntegCarousel;

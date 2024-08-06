@@ -42,8 +42,11 @@
 box-shadow: 10px -38px 131px -70px rgba(241,190,4,1);
 } */
 
-#homeSection {
-  background: radial-gradient(ellipse at center,  #f1be048a 0%,#111822 40%);
+
+@media screen and (min-width: 768px) {
+  #homeSection {
+    background: radial-gradient(ellipse at center,  #f1be048a 0%,#111822 40%);
+  }
 }
 
 @keyframes slide {
